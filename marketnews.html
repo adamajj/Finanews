@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukraine Strikes Key Russian Oil Pipeline, Sending Energy Markets into Turmoil - FinaNews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-blue: #1e3a8a;
+            --accent-blue: #2563eb;
+            --light-blue: #3b82f6;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-lg: 0 4px 6px rgba(0,0,0,0.07);
+            --shadow-xl: 0 10px 15px rgba(0,0,0,0.1);
+            --ad-green: #059669;
+            --ad-blue: #0891b2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            color: var(--text-primary);
+            position: relative;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Full Screen Container */
+        .full-screen-container {
+            width: 100vw;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Floating Left Ad - BIGGER */
+        .floating-left-ad {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 240px;
+            height: 700px;
+            z-index: 1000;
+            background: var(--bg-white);
+            border-radius: 0 12px 12px 0;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+
+        .floating-left-ad-header {
+            background: linear-gradient(90deg, var(--ad-green), var(--ad-blue));
+            color: white;
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .floating-left-ad-content {
+            padding: 25px 20px;
+            text-align: center;
+            height: calc(100% - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-light);
+        }
+
+        /* Floating Right Ad - BIGGER */
+        .floating-right-ad {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 240px;
+            height: 700px;
+            z-index: 1000;
+            background: var(--bg-white);
+            border-radius: 12px 0 0 12px;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+
+        .floating-right-ad-header {
+            background: linear-gradient(90deg, var(--ad-green), var(--ad-blue));
+            color: white;
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .floating-right-ad-content {
+            padding: 25px 20px;
+            text-align: center;
+            height: calc(100% - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-light);
+        }
+
+        /* Main Content Area - Adjusted for bigger ads */
+        .main-content-wrapper {
+            flex: 1;
+            margin: 0 260px;
+            padding: 0 40px;
+            width: calc(100vw - 520px);
+            min-width: 1200px;
+            max-width: 1600px;
+        }
+
+        /* Top Banner Ad */
+        .top-banner-ad {
+            background: linear-gradient(90deg, var(--ad-green), var(--ad-blue));
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 13px;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .top-banner-ad::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            animation: shimmer 4s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .top-banner-ad .ad-label {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 8px;
+            font-size: 11px;
+        }
+
+        /* Header Styles - More Subtle */
+        .header-wrapper {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .header-top {
+            background: var(--primary-dark);
+            color: white;
+            padding: 6px 0;
+            font-size: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .market-ticker-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .market-ticker {
+            display: flex;
+            animation: ticker 35s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0 30px;
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        .ticker-item i {
+            color: var(--light-blue);
+            font-size: 10px;
+        }
+
+        .ticker-change.positive {
+            color: #059669;
+        }
+
+        .ticker-change.negative {
+            color: #dc2626;
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--primary-dark);
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--primary-blue);
+        }
+
+        .logo-tagline {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .header-date {
+            text-align: right;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #dc2626;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 6px;
+        }
+
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Navigation Tabs - More Subtle */
+        .nav-wrapper {
+            background: var(--bg-white);
+            border-top: 1px solid var(--border-color);
+            padding: 0;
+        }
+
+        .nav-tabs-custom {
+            display: flex;
+            gap: 0;
+            border: none;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .nav-tabs-custom .nav-item {
+            position: relative;
+        }
+
+        .nav-tabs-custom .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 24px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            border: none;
+            background: transparent;
+            position: relative;
+        }
+
+        .nav-tabs-custom .nav-link:hover {
+            color: var(--primary-blue);
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        .nav-tabs-custom .nav-link.active {
+            color: var(--primary-blue);
+            background: transparent;
+        }
+
+        .nav-tabs-custom .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-blue);
+        }
+
+        /* Article Page Styles */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        .article-header {
+            margin-bottom: 25px;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .article-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .author-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 15px;
+        }
+
+        .article-date {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .article-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-share-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .social-share-btn:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+
+        .article-content {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--primary-blue);
+            padding-left: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 30px 0 15px;
+            color: var(--text-primary);
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        /* In-Article Ad */
+        .in-article-ad {
+            background: var(--bg-white);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin: 40px 0;
+            width: 100%;
+            border: 1px solid var(--border-color);
+        }
+
+        .in-article-ad-header {
+            background: linear-gradient(90deg, var(--ad-green), var(--ad-blue));
+            color: white;
+            padding: 6px 12px;
+            font-size: 11px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .in-article-ad-content {
+            padding: 15px;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-light);
+        }
+
+        /* Ad Banner Content - More Subtle */
+        .ad-banner-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: var(--bg-white);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .ad-banner-icon {
+            font-size: 24px;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .ad-banner-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .ad-banner-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .ad-banner-cta {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .ad-banner-cta:hover {
+            background: var(--accent-blue);
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-articles-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .related-articles-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .related-articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .related-article-card {
+            background: var(--bg-white);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            height: 100%;
+            border: 1px solid var(--border-color);
+        }
+
+        .related-article-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+
+        .related-article-image {
+            position: relative;
+            height: 140px;
+            overflow: hidden;
+            background: var(--bg-light);
+        }
+
+        .related-article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .related-article-card:hover .related-article-image img {
+            transform: scale(1.05);
+        }
+
+        .related-article-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .related-article-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .related-article-excerpt {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .related-article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-article-author {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .related-article-author i {
+            color: var(--primary-blue);
+            font-size: 10px;
+        }
+
+        .related-article-time {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Comments Section */
+        .comments-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .comments-header {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .comment-form {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .comment-form-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-blue);
+        }
+
+        .comment {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .comment-content {
+            flex: 1;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .comment-author {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .comment-date {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        .comment-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+
+        .comment-actions {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .comment-action {
+            color: var(--text-secondary);
+            font-size: 13px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s ease;
+        }
+
+        .comment-action:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Footer - More Professional */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .footer-column h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 6px;
+        }
+
+        .footer-column ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 15px;
+            border-top: 1px solid #374151;
+            text-align: center;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            justify-content: flex-start;
+        }
+
+        .social-links a {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1600px) {
+            .main-content-wrapper {
+                max-width: 1400px;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            .main-content-wrapper {
+                margin: 0 250px;
+                width: calc(100vw - 500px);
+                min-width: 1000px;
+            }
+            
+            .floating-left-ad,
+            .floating-right-ad {
+                width: 220px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .main-content-wrapper {
+                margin: 0 240px;
+                width: calc(100vw - 480px);
+                min-width: 900px;
+            }
+            
+            .floating-left-ad,
+            .floating-right-ad {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .floating-left-ad,
+            .floating-right-ad {
+                display: none;
+            }
+            
+            .main-content-wrapper {
+                margin: 0;
+                width: 100%;
+                padding: 0 20px;
+                min-width: auto;
+            }
+
+            .related-articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 24px;
+            }
+
+            .article-image {
+                height: 250px;
+            }
+
+            .related-articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs-custom .nav-link {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="full-screen-container">
+        <!-- Floating Left Ad - BIGGER -->
+        <div class="floating-left-ad">
+            <div class="floating-left-ad-header">
+                <span>ADVERTISEMENT</span>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+            <div class="floating-left-ad-content">
+                <div class="ad-banner-content">
+                    <i class="fas fa-chart-line ad-banner-icon" style="font-size: 36px; margin-bottom: 15px;"></i>
+                    <h3 class="ad-banner-title" style="font-size: 18px; margin-bottom: 8px;">Energy Analytics</h3>
+                    <p class="ad-banner-text" style="font-size: 14px; margin-bottom: 15px;">Real-time oil & gas market insights and professional trading tools</p>
+                    <a href="#" class="ad-banner-cta" style="padding: 8px 16px; font-size: 14px;">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Right Ad - BIGGER -->
+        <div class="floating-right-ad">
+            <div class="floating-right-ad-header">
+                <span>ADVERTISEMENT</span>
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+            <div class="floating-right-ad-content">
+                <div class="ad-banner-content">
+                    <i class="fas fa-globe-europe ad-banner-icon" style="font-size: 36px; margin-bottom: 15px;"></i>
+                    <h3 class="ad-banner-title" style="font-size: 18px; margin-bottom: 8px;">Geopolitical Risk</h3>
+                    <p class="ad-banner-text" style="font-size: 14px; margin-bottom: 15px;">Comprehensive analysis of global political events and market impact</p>
+                    <a href="#" class="ad-banner-cta" style="padding: 8px 16px; font-size: 14px;">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content-wrapper">
+            <!-- Top Banner Ad -->
+            <div class="top-banner-ad">
+                <span class="ad-label">ADVERTISEMENT</span>
+                📈 Special Offer: Get Premium Financial Insights - 30% Off Annual Subscription! Limited Time Only.
+            </div>
+
+            <!-- Header -->
+            <header class="header-wrapper">
+                <div class="header-top">
+                    <div class="market-ticker-container">
+                        <div class="market-ticker" id="marketTicker">
+                            <!-- Ticker items will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="header-main">
+                    <div class="container">
+                        <div class="logo-section">
+                            <a href="#" class="logo">
+                                <div>
+                                    <div class="logo-text">FinaNews</div>
+                                    <div class="logo-tagline">Your Trusted Financial Source</div>
+                                </div>
+                            </a>
+                            <div class="header-date">
+                                <div id="currentDate"></div>
+                                <div class="live-indicator">
+                                    <span class="live-dot"></span>
+                                    LIVE
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Navigation -->
+            <nav class="nav-wrapper">
+                <div class="container">
+                    <ul class="nav-tabs-custom" id="mainTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#business" data-bs-toggle="tab">
+                                <i class="fas fa-briefcase"></i> Business
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#economic" data-bs-toggle="tab">
+                                <i class="fas fa-coins"></i> Economic
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#market" data-bs-toggle="tab">
+                                <i class="fas fa-chart-bar"></i> Market
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-bs-toggle="tab">
+                                <i class="fas fa-info-circle"></i> About
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Article Content -->
+            <div class="article-container">
+                <div class="article-header">
+                    <span class="article-category">Energy Markets</span>
+                    <h1 class="article-title">Ukraine Strikes Key Russian Oil Pipeline, Sending Energy Markets into Turmoil</h1>
+                    <p class="article-subtitle">Attack on Druzhba pipeline threatens European energy supplies as oil prices surge to three-month highs</p>
+                    <div class="article-meta">
+                        <div class="author-info">
+                            <div class="author-avatar">DK</div>
+                            <div class="author-details">
+                                <span class="author-name">Dmitry Kovalenko</span>
+                                <span class="article-date">June 15, 2024 • 8:45 AM EST</span>
+                            </div>
+                        </div>
+                        <div class="article-social">
+                            <a href="#" class="social-share-btn"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-share-btn"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-share-btn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-share-btn"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-image">
+                    <img src="https://picsum.photos/seed/oil-pipeline-strike/900/450.jpg" alt="Damaged oil pipeline">
+                    <div class="image-caption">Photo: Emergency services at the site of the damaged oil pipeline in Russia's Bryansk region</div>
+                </div>
+
+                <div class="article-content">
+                    <p>KYIV – Ukrainian forces conducted a precision strike on a critical section of Russia's Druzhba oil pipeline early Thursday morning, marking the most significant attack on Russian energy infrastructure since the conflict began. The assault immediately disrupted approximately 700,000 barrels per day of crude exports to Eastern and Central Europe, triggering a sharp rally in global oil markets.</p>
+                    
+                    <p>The Druzhba pipeline, which translates to "Friendship" in Russian, represents one of the world's longest pipeline networks and has been a cornerstone of Soviet and Russian energy exports to Europe since the 1960s. Thursday's attack targeted a pumping station in Russia's Bryansk region, approximately 100 kilometers from the Ukrainian border, according to Ukrainian military sources who spoke on condition of anonymity.</p>
+                    
+                    <blockquote>"This operation was carefully planned to minimize civilian casualties while maximizing impact on Russia's war funding capabilities," said a Ukrainian defense official in a statement. "Energy exports remain the primary source of revenue financing Russia's illegal invasion of our sovereign territory."</blockquote>
+                    
+                    <p>International benchmark Brent crude surged 4.8% to $87.65 per barrel following news of the attack, while West Texas Intermediate rose 5.2% to $83.40. European natural gas futures also jumped 12% as traders anticipated potential supply disruptions to the continent.</p>
+                    
+                    <h3>Market Impact and Response</h3>
+                    <p>The attack sent shockwaves through global energy markets, with analysts scrambling to assess the potential long-term implications. Russia's energy ministry confirmed the disruption but claimed repairs would be completed "within days," though independent experts suggested the damage could take weeks to fully address.</p>
+                    
+                    <p>"This represents a significant escalation in Ukraine's targeting of Russian energy infrastructure," said Elena Petrova, senior energy analyst at Eurasian Market Insights. "While previous attacks have targeted storage facilities and refineries, striking a major export pipeline demonstrates both improved capabilities and a willingness to directly impact global energy supplies."</p>
+                    
+                    <p>European Commission President Ursula von der Leyen called an emergency meeting of EU energy ministers to discuss contingency plans. "We are monitoring the situation closely and have activated our strategic petroleum reserves to ensure supply security," she told reporters in Brussels.</p>
+                    
+                    <h3>Geopolitical Implications</h3>
+                    <p>The attack comes at a particularly sensitive time for global energy markets, already strained by OPEC+ production cuts and increased demand during the Northern Hemisphere's summer driving season. Several European countries that remain dependent on Russian oil, including Hungary and Slovakia, immediately requested emergency consultations with the International Energy Agency.</p>
+                    
+                    <p>Russian President Vladimir Putin condemned the attack as "terrorism" and promised a "proportional response." The Russian Ministry of Foreign Affairs summoned the ambassadors of several Western countries, accusing them of "facilitating Ukrainian aggression against critical civilian infrastructure."</p>
+                    
+                    <p>Ukrainian President Volodymyr Zelenskyy defended the operation in his nightly address, stating: "Every dollar Russia cannot earn from energy exports is a dollar that cannot be used to buy weapons and kill Ukrainians. We will continue to target the economic foundations of Russia's war machine for as long as necessary."</p>
+                    
+                    <h3>Energy Security Concerns</h3>
+                    <p>The incident has renewed debate about Europe's energy security and its continued reliance on Russian fossil fuels. Despite significant efforts to diversify energy sources since the 2022 invasion, approximately 15% of European oil imports still originate from Russia, with the Druzhba pipeline serving as a critical artery for landlocked countries in Central and Eastern Europe.</p>
+                    
+                    <p>"This attack underscores the vulnerability of pipeline infrastructure to modern warfare," said Michael Harrington, energy security expert at the Atlantic Council. "Even if Russia can repair this damage relatively quickly, the psychological impact on markets and the demonstration of Ukraine's capabilities will have lasting effects on how energy security is conceptualized in Europe."</p>
+                    
+                    <p>Industry analysts suggest that the disruption could accelerate existing trends toward energy diversification, potentially benefiting alternative suppliers in the Middle East, North America, and the Caspian region. However, infrastructure limitations mean that replacing Russian pipeline oil will remain challenging in the short term.</p>
+                    
+                    <p>As markets continue to react to the news, energy traders are closely watching for any further escalation in Ukraine's campaign against Russian energy infrastructure, which could have profound implications for global energy prices and economic stability in the coming months.</p>
+                </div>
+
+                <!-- In-Article Ad -->
+                <div class="in-article-ad">
+                    <div class="in-article-ad-header">
+                        <span>ADVERTISEMENT</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                    <div class="in-article-ad-content">
+                        <div class="ad-banner-content">
+                            <i class="fas fa-gas-pump ad-banner-icon" style="font-size: 32px; margin-bottom: 12px;"></i>
+                            <h3 class="ad-banner-title" style="font-size: 16px; margin-bottom: 6px;">Energy Market Intelligence</h3>
+                            <p class="ad-banner-text" style="font-size: 13px; margin-bottom: 12px;">Real-time tracking of global energy infrastructure and supply chains</p>
+                            <a href="#" class="ad-banner-cta" style="padding: 7px 14px; font-size: 13px;">Get Access</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="related-articles">
+                    <div class="related-articles-header">
+                        <h2 class="related-articles-title">Related Articles</h2>
+                    </div>
+                    <div class="related-articles-grid">
+                        <a href="#" class="related-article-card">
+                            <div class="related-article-image">
+                                <img src="https://picsum.photos/seed/oil-prices-surge/400/200.jpg" alt="Oil prices surge">
+                            </div>
+                            <div class="related-article-content">
+                                <h3 class="related-article-title">Oil Prices Surge to Three-Month Highs Following Pipeline Attack</h3>
+                                <p class="related-article-excerpt">Brent crude approaches $90 per barrel as markets assess supply disruption risks</p>
+                                <div class="related-article-footer">
+                                    <span class="related-article-author">
+                                        <i class="fas fa-user"></i> Maria Petrov
+                                    </span>
+                                    <span class="related-article-time">
+                                        <i class="fas fa-clock"></i> 2 hours ago
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-article-card">
+                            <div class="related-article-image">
+                                <img src="https://picsum.photos/seed/eu-energy-security/400/200.jpg" alt="EU energy security">
+                            </div>
+                            <div class="related-article-content">
+                                <h3 class="related-article-title">EU Activates Strategic Petroleum Reserves Amid Supply Concerns</h3>
+                                <p class="related-article-excerpt">Brussels calls emergency meeting of energy ministers to coordinate response</p>
+                                <div class="related-article-footer">
+                                    <span class="related-article-author">
+                                        <i class="fas fa-user"></i> Hans Mueller
+                                    </span>
+                                    <span class="related-article-time">
+                                        <i class="fas fa-clock"></i> 3 hours ago
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="related-article-card">
+                            <div class="related-article-image">
+                                <img src="https://picsum.photos/seed/russian-energy-infrastructure/400/200.jpg" alt="Russian energy infrastructure">
+                            </div>
+                            <div class="related-article-content">
+                                <h3 class="related-article-title">Analysis: Ukraine's Evolving Strategy Against Russian Energy Infrastructure</h3>
+                                <p class="related-article-excerpt">From storage depots to export pipelines: The expanding scope of Ukrainian attacks</p>
+                                <div class="related-article-footer">
+                                    <span class="related-article-author">
+                                        <i class="fas fa-user"></i> Alexandra Chen
+                                    </span>
+                                    <span class="related-article-time">
+                                        <i class="fas fa-clock"></i> 5 hours ago
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="comments-section">
+                    <h2 class="comments-header">Comments (24)</h2>
+                    
+                    <div class="comment-form">
+                        <h3 class="comment-form-title">Leave a Comment</h3>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="4" placeholder="Your Comment"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Post Comment</button>
+                        </form>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-avatar">JD</div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">James Davidson</span>
+                                <span class="comment-date">2 hours ago</span>
+                            </div>
+                            <p class="comment-text">This is a significant escalation that will have ripple effects across global markets. Europe's energy security was already fragile, and this attack exposes the vulnerability of remaining Russian energy imports.</p>
+                            <div class="comment-actions">
+                                <a href="#" class="comment-action"><i class="fas fa-thumbs-up"></i> 12</a>
+                                <a href="#" class="comment-action"><i class="fas fa-reply"></i> Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-avatar">EK</div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Elena Kozlov</span>
+                                <span class="comment-date">3 hours ago</span>
+                            </div>
+                            <p class="comment-text">As someone working in the energy sector, I can tell you that repairing pipeline infrastructure is far more complex than Russia is admitting. The specialized equipment and technical expertise required means this disruption could last weeks, not days.</p>
+                            <div class="comment-actions">
+                                <a href="#" class="comment-action"><i class="fas fa-thumbs-up"></i> 8</a>
+                                <a href="#" class="comment-action"><i class="fas fa-reply"></i> Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-avatar">MT</div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Mark Thompson</span>
+                                <span class="comment-date">4 hours ago</span>
+                            </div>
+                            <p class="comment-text">While I understand Ukraine's position, attacks on civilian infrastructure that impact global energy supplies are concerning. This could backfire if it drives neutral countries away from supporting Ukraine.</p>
+                            <div class="comment-actions">
+                                <a href="#" class="comment-action"><i class="fas fa-thumbs-up"></i> 5</a>
+                                <a href="#" class="comment-action"><i class="fas fa-reply"></i> Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-grid">
+                        <div class="footer-column">
+                            <h4>About FinaNews</h4>
+                            <p style="color: #9ca3af; font-size: 12px; line-height: 1.5;">
+                                Your trusted source for financial news, market analysis, and economic insights. 
+                                Delivering quality journalism since 2020.
+                            </p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#">Business News</a></li>
+                                <li><a href="#">Market Analysis</a></li>
+                                <li><a href="#">Economic Reports</a></li>
+                                <li><a href="#">Investment Guide</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#">Market Data</a></li>
+                                <li><a href="#">Economic Calendar</a></li>
+                                <li><a href="#">Financial Tools</a></li>
+                                <li><a href="#">Research Reports</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 FinaNews. All rights reserved. | Market data provided for informational purposes only.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Market Ticker Data
+        const marketData = [
+            { symbol: 'S&P 500', value: '4,567.18', change: '+1.2%', positive: true },
+            { symbol: 'DOW', value: '35,678.90', change: '+0.8%', positive: true },
+            { symbol: 'NASDAQ', value: '14,235.67', change: '-0.3%', positive: false },
+            { symbol: 'FTSE 100', value: '7,456.23', change: '+0.5%', positive: true },
+            { symbol: 'DAX', value: '15,234.56', change: '+0.7%', positive: true },
+            { symbol: 'NIKKEI', value: '28,456.78', change: '-0.2%', positive: false },
+            { symbol: 'USD/EUR', value: '0.9234', change: '+0.1%', positive: true },
+            { symbol: 'GBP/USD', value: '1.2745', change: '-0.4%', positive: false },
+            { symbol: 'GOLD', value: '$1,945.60', change: '+0.3%', positive: true },
+            { symbol: 'OIL', value: '$78.45', change: '+1.5%', positive: true },
+            { symbol: 'BITCOIN', value: '$43,567', change: '+2.3%', positive: true },
+            { symbol: '10Y YIELD', value: '4.25%', change: '-0.05%', positive: false }
+        ];
+
+        // Initialize Market Ticker
+        function initMarketTicker() {
+            const tickerContainer = document.getElementById('marketTicker');
+            
+            // Create two sets of ticker items for continuous scrolling
+            const tickerHTML = marketData.concat(marketData).map(item => `
+                <div class="ticker-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>${item.symbol}</span>
+                    <span>${item.value}</span>
+                    <span class="ticker-change ${item.positive ? 'positive' : 'negative'}">
+                        <i class="fas fa-arrow-${item.positive ? 'up' : 'down'}"></i> ${item.change}
+                    </span>
+                </div>
+            `).join('');
+            
+            tickerContainer.innerHTML = tickerHTML;
+        }
+
+        // Update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            
+            document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', dateOptions);
+        }
+
+        // Update Market Data (Simulated Live Updates)
+        function updateMarketData() {
+            marketData.forEach(item => {
+                // Randomly update values
+                const changeAmount = (Math.random() * 0.4 - 0.2).toFixed(2);
+                const newChange = (parseFloat(item.change.replace('%', '')) + parseFloat(changeAmount)).toFixed(1);
+                item.change = (newChange > 0 ? '+' : '') + newChange + '%';
+                item.positive = newChange > 0;
+                
+                // Update value slightly
+                if (item.symbol !== 'USD/EUR' && item.symbol !== 'GBP/USD' && item.symbol !== '10Y YIELD') {
+                    const valueChange = (Math.random() * 20 - 10).toFixed(2);
+                    const currentValue = parseFloat(item.value.replace(/[^0-9.-]/g, ''));
+                    const newValue = (currentValue + parseFloat(valueChange)).toFixed(2);
+                    
+                    if (item.symbol === 'GOLD' || item.symbol === 'OIL' || item.symbol === 'BITCOIN') {
+                        item.value = item.symbol === 'BITCOIN' ? '$' + newValue : '$' + newValue;
+                    } else {
+                        item.value = newValue.includes('.') ? newValue : newValue + '.00';
+                    }
+                }
+            });
+            
+            // Re-render ticker with updated data
+            initMarketTicker();
+        }
+
+        // Initialize all components
+        function initializeAll() {
+            initMarketTicker();
+            updateDateTime();
+            
+            // Update market data every 5 seconds to simulate live updates
+            setInterval(updateMarketData, 5000);
+            
+            // Update time every second
+            setInterval(updateDateTime, 1000);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeAll();
+        });
+    </script>
+</body>
+</html>
