@@ -1186,7 +1186,7 @@
                 <div class="tab-pane fade" id="market">
                     <!-- Featured Article -->
                     <section class="featured-section">
-                        <a href="https://adamajj.github.io/Finanews/marketnews.html" class="featured-article" target="_blank">
+                        <a href="#" class="featured-article" onclick="loadMarketArticle(); return false;">
                             <div class="featured-badge">EXCLUSIVE</div>
                             <div class="featured-image">
                                 <img src="https://picsum.photos/seed/market1/900/450.jpg" alt="Featured Market Article">
@@ -1675,6 +1675,165 @@
                     </div>
                 </a>
             `).join('');
+        }
+
+        // Load Market Article Function
+        function loadMarketArticle() {
+            // Create the article content container
+            const articleHTML = `
+                <div class="article-container">
+                    <div class="article-header">
+                        <span class="article-category">Energy Markets</span>
+                        <h1 class="article-title">Ukraine Strikes Key Russian Oil Pipeline, Sending Energy Markets into Turmoil</h1>
+                        <p class="article-subtitle">Attack on Druzhba pipeline threatens European energy supplies as oil prices surge to three-month highs</p>
+                        <div class="article-meta">
+                            <div class="author-info">
+                                <div class="author-avatar">DK</div>
+                                <div class="author-details">
+                                    <span class="author-name">Dmitry Kovalenko</span>
+                                    <span class="article-date">June 15, 2024 • 8:45 AM EST</span>
+                                </div>
+                            </div>
+                            <div class="article-social">
+                                <a href="#" class="social-share-btn"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-share-btn"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-share-btn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-share-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-image">
+                        <img src="https://picsum.photos/seed/oil-pipeline-strike/900/450.jpg" alt="Damaged oil pipeline">
+                        <div class="image-caption">Photo: Emergency services at the site of the damaged oil pipeline in Russia's Bryansk region</div>
+                    </div>
+
+                    <div class="article-content">
+                        <p>KYIV – Ukrainian forces conducted a precision strike on a critical section of Russia's Druzhba oil pipeline early Thursday morning, marking the most significant attack on Russian energy infrastructure since the conflict began. The assault immediately disrupted approximately 700,000 barrels per day of crude exports to Eastern and Central Europe, triggering a sharp rally in global oil markets.</p>
+                        
+                        <p>The Druzhba pipeline, which translates to "Friendship" in Russian, represents one of the world's longest pipeline networks and has been a cornerstone of Soviet and Russian energy exports to Europe since the 1960s. Thursday's attack targeted a pumping station in Russia's Bryansk region, approximately 100 kilometers from the Ukrainian border, according to Ukrainian military sources who spoke on condition of anonymity.</p>
+                        
+                        <blockquote>"This operation was carefully planned to minimize civilian casualties while maximizing impact on Russia's war funding capabilities," said a Ukrainian defense official in a statement. "Energy exports remain the primary source of revenue financing Russia's illegal invasion of our sovereign territory."</blockquote>
+                        
+                        <p>International benchmark Brent crude surged 4.8% to $87.65 per barrel following news of the attack, while West Texas Intermediate rose 5.2% to $83.40. European natural gas futures also jumped 12% as traders anticipated potential supply disruptions to the continent.</p>
+                        
+                        <h3>Market Impact and Response</h3>
+                        <p>The attack sent shockwaves through global energy markets, with analysts scrambling to assess the potential long-term implications. Russia's energy ministry confirmed the disruption but claimed repairs would be completed "within days," though independent experts suggested the damage could take weeks to fully address.</p>
+                        
+                        <p>"This represents a significant escalation in Ukraine's targeting of Russian energy infrastructure," said Elena Petrova, senior energy analyst at Eurasian Market Insights. "While previous attacks have targeted storage facilities and refineries, striking a major export pipeline demonstrates both improved capabilities and a willingness to directly impact global energy supplies."</p>
+                        
+                        <p>European Commission President Ursula von der Leyen called an emergency meeting of EU energy ministers to discuss contingency plans. "We are monitoring the situation closely and have activated our strategic petroleum reserves to ensure supply security," she told reporters in Brussels.</p>
+                        
+                        <h3>Geopolitical Implications</h3>
+                        <p>The attack comes at a particularly sensitive time for global energy markets, already strained by OPEC+ production cuts and increased demand during the Northern Hemisphere's summer driving season. Several European countries that remain dependent on Russian oil, including Hungary and Slovakia, immediately requested emergency consultations with the International Energy Agency.</p>
+                        
+                        <p>Russian President Vladimir Putin condemned the attack as "terrorism" and promised a "proportional response." The Russian Ministry of Foreign Affairs summoned the ambassadors of several Western countries, accusing them of "facilitating Ukrainian aggression against critical civilian infrastructure."</p>
+                        
+                        <p>Ukrainian President Volodymyr Zelenskyy defended the operation in his nightly address, stating: "Every dollar Russia cannot earn from energy exports is a dollar that cannot be used to buy weapons and kill Ukrainians. We will continue to target the economic foundations of Russia's war machine for as long as necessary."</p>
+                        
+                        <h3>Energy Security Concerns</h3>
+                        <p>The incident has renewed debate about Europe's energy security and its continued reliance on Russian fossil fuels. Despite significant efforts to diversify energy sources since the 2022 invasion, approximately 15% of European oil imports still originate from Russia, with the Druzhba pipeline serving as a critical artery for landlocked countries in Central and Eastern Europe.</p>
+                        
+                        <p>"This attack underscores the vulnerability of pipeline infrastructure to modern warfare," said Michael Harrington, energy security expert at the Atlantic Council. "Even if Russia can repair this damage relatively quickly, the psychological impact on markets and the demonstration of Ukraine's capabilities will have lasting effects on how energy security is conceptualized in Europe."</p>
+                        
+                        <p>Industry analysts suggest that the disruption could accelerate existing trends toward energy diversification, potentially benefiting alternative suppliers in the Middle East, North America, and the Caspian region. However, infrastructure limitations mean that replacing Russian pipeline oil will remain challenging in the short term.</p>
+                        
+                        <p>As markets continue to react to the news, energy traders are closely watching for any further escalation in Ukraine's campaign against Russian energy infrastructure, which could have profound implications for global energy prices and economic stability in the coming months.</p>
+                    </div>
+
+                    <!-- In-Article Ad -->
+                    <div class="in-article-ad">
+                        <div class="in-article-ad-header">
+                            <span>ADVERTISEMENT</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="in-article-ad-content">
+                            <div class="ad-banner-content">
+                                <i class="fas fa-gas-pump ad-banner-icon" style="font-size: 32px; margin-bottom: 12px;"></i>
+                                <h3 class="ad-banner-title" style="font-size: 16px; margin-bottom: 6px;">Energy Market Intelligence</h3>
+                                <p class="ad-banner-text" style="font-size: 13px; margin-bottom: 12px;">Real-time tracking of global energy infrastructure and supply chains</p>
+                                <a href="#" class="ad-banner-cta" style="padding: 7px 14px; font-size: 13px;">Get Access</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="comments-section">
+                        <h2 class="comments-header">Comments (24)</h2>
+                        
+                        <div class="comment-form">
+                            <h3 class="comment-form-title">Leave a Comment</h3>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Your Comment"></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary">Post Comment</button>
+                            </form>
+                        </div>
+                        
+                        <div class="comment">
+                            <div class="comment-avatar">JD</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="comment-author">James Davidson</span>
+                                    <span class="comment-date">2 hours ago</span>
+                                </div>
+                                <p class="comment-text">This is a significant escalation that will have ripple effects across global markets. Europe's energy security was already fragile, and this attack exposes the vulnerability of remaining Russian energy imports.</p>
+                                <div class="comment-actions">
+                                    <a href="#" class="comment-action"><i class="fas fa-thumbs-up"></i> 12</a>
+                                    <a href="#" class="comment-action"><i class="fas fa-reply"></i> Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comment">
+                            <div class="comment-avatar">EK</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="comment-author">Elena Kozlov</span>
+                                    <span class="comment-date">3 hours ago</span>
+                                </div>
+                                <p class="comment-text">As someone working in the energy sector, I can tell you that repairing pipeline infrastructure is far more complex than Russia is admitting. The specialized equipment and technical expertise required means this disruption could last weeks, not days.</p>
+                                <div class="comment-actions">
+                                    <a href="#" class="comment-action"><i class="fas fa-thumbs-up"></i> 8</a>
+                                    <a href="#" class="comment-action"><i class="fas fa-reply"></i> Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comment">
+                            <div class="comment-avatar">MT</div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="comment-author">Mark Thompson</span>
+                                    <span class="comment-date">4 hours ago</span>
+                                </div>
+                                <p class="comment-text">While I understand Ukraine's position, attacks on civilian infrastructure that impact global energy supplies are concerning. This could backfire if it drives neutral countries away from supporting Ukraine.</p>
+                                <div class="comment-actions">
+                                    <a href="#" class="comment-action"><i class="fas fa-thumbs-up"></i> 5</a>
+                                    <a href="#" class="comment-action"><i class="fas fa-reply"></i> Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Replace the market tab content with the article
+            const marketTab = document.getElementById('market');
+            marketTab.innerHTML = articleHTML;
+
+            // Scroll to top of the page
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
         // Update date and time
